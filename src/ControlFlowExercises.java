@@ -5,11 +5,9 @@ public class ControlFlowExercises {
             System.out.println("i is "+ i);
             i++;
         }
-        int j = 100;
-        do{
+        for(int j = 100; j>=-10; j-=5){
             System.out.println(j);
-                    j-=5;
-        }while(j>=-10);
+        }
 
     }
 }
