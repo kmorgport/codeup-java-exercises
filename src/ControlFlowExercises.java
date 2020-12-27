@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args){
 //        int i = 5;
@@ -25,6 +26,16 @@ public class ControlFlowExercises {
 //                System.out.println(k);
 //            }
 //        }
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("What number would you like to go up to? ");
+        int integer = scanner.nextInt();
+        System.out.println("Here is your table!");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for(int z=1; z<=integer; z++){
+            System.out.format("%1s%10d%10s%n", z, z*z, z*z*z);
+        }
 
     }
 }
