@@ -21,7 +21,7 @@ public class MethodsExercises {
     public static int modulus(int a, int b){
         return a%b;
     }
-    public static int getInteger(int min, int max){
+    public static String getInteger(int min, int max){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number between " +min+" and "+max+": ");
         int input = sc.nextInt();
@@ -30,7 +30,8 @@ public class MethodsExercises {
             System.out.println("Enter a number between " +min+" and "+max+": ");
             input = sc.nextInt();
         }
-       return input;
+        String message = "You chose the number "+input+". That is a number between "+min+" and "+max+".";
+       return message;
     }
     public static void main(String[] args){
         int sum = addition(3,2);
@@ -43,7 +44,7 @@ public class MethodsExercises {
         System.out.println(remain);
         int mod = modulus(10,5);
         System.out.println(mod);
-        int choice = getInteger(4,12);
+        String choice = getInteger(4,12);
         System.out.println(choice);
     }
 }
