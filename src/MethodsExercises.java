@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class MethodsExercises {
     public static int addition(int a, int b){
         return a+b;
@@ -20,6 +21,17 @@ public class MethodsExercises {
     public static int modulus(int a, int b){
         return a%b;
     }
+    public static int getInteger(int min, int max){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number between " +min+" and "+max+": ");
+        int input = sc.nextInt();
+        while(input<min|| input>max){
+            sc = new Scanner(System.in);
+            System.out.println("Enter a number between " +min+" and "+max+": ");
+            input = sc.nextInt();
+        }
+       return input;
+    }
     public static void main(String[] args){
         int sum = addition(3,2);
         System.out.println(sum);
@@ -31,6 +43,7 @@ public class MethodsExercises {
         System.out.println(remain);
         int mod = modulus(10,5);
         System.out.println(mod);
+        int choice = getInteger(4,12);
+        System.out.println(choice);
     }
-
 }
