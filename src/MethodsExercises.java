@@ -33,18 +33,35 @@ public class MethodsExercises {
         String message = "You chose the number "+input+". That is a number between "+min+" and "+max+".";
        return message;
     }
+    public static String factorial(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please pick a number between 1 and 10");
+        int input = sc.nextInt();
+        while(input<1||input>10){
+            sc = new Scanner(System.in);
+            System.out.println("Please pick a number between 1 and 10");
+            input = sc.nextInt();
+        }
+        long fact = 1;
+        for(int i = 1; i<=input; i++){
+            fact = fact *i;
+        }
+        return "The factorial of !"+input+" is "+fact+".";
+    }
     public static void main(String[] args){
-        int sum = addition(3,2);
-        System.out.println(sum);
-        int diff = subtraction(5,2);
-        System.out.println(diff);
-        int prod = multiplication(3,2);
-        System.out.println(prod);
-        int remain = division(6,2);
-        System.out.println(remain);
-        int mod = modulus(10,5);
-        System.out.println(mod);
-        String choice = getInteger(4,12);
-        System.out.println(choice);
+//        int sum = addition(3,2);
+//        System.out.println(sum);
+//        int diff = subtraction(5,2);
+//        System.out.println(diff);
+//        int prod = multiplication(3,2);
+//        System.out.println(prod);
+//        int remain = division(6,2);
+//        System.out.println(remain);
+//        int mod = modulus(10,5);
+//        System.out.println(mod);
+//        String choice = getInteger(4,12);
+//        System.out.println(choice);
+        String factor = factorial();
+        System.out.println(factor);
     }
 }
