@@ -57,6 +57,11 @@ public class JavaPractice {
         String d = b.substring(0,1);
         return c+d;
     }
+
+    public static boolean endsLy(String str){
+        String a = str.substring(str.length()-2);
+        return a.equals("ly");
+    }
     public static void main(String[] args){
 //        String hello = right2("Hello");
 //        System.out.println(hello);
@@ -72,11 +77,15 @@ public class JavaPractice {
 //        System.out.println(abc);
 //        String ab = withoutEnd("a");
 //        System.out.println(ab);
-        String string = middleTwo("string");
-        System.out.println(string);
-        String practice = middleTwo("practice");
-        System.out.println(practice);
-        String code = middleTwo("code");
-        System.out.println(code);
+//        String string = middleTwo("string");
+//        System.out.println(string);
+//        String practice = middleTwo("practice");
+//        System.out.println(practice);
+//        String code = middleTwo("code");
+//        System.out.println(code);
+        Boolean oddly = endsLy("oddly");
+        System.out.println(oddly);
+        Boolean y = endsLy("y");
+        System.out.println(y);
     }
 }
