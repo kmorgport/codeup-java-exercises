@@ -26,5 +26,7 @@ public class JavaPractice {
         System.out.println(hello);
         String onetwo = right2("12345");
         System.out.println(onetwo);
+        String cat = right2("cat");
+        System.out.print(cat);
     }
 }
