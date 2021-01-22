@@ -59,8 +59,22 @@ public class JavaPractice {
     }
 
     public static boolean endsLy(String str){
-        String a = str.substring(str.length()-2);
-        return a.equals("ly");
+        if(str.length()>=2){
+            String a = str.substring(str.length()-2);
+            return a.equals("ly");
+        }else{
+            return false;
+        }
+    }
+
+    public static String twoChar(String str, int index){
+        String a;
+        if(index==0 || str.length()<=index+1){
+            a = str.substring(0, 2);
+        }else {
+            a = str.substring(str.length() - index);
+        }
+        return a;
     }
     public static void main(String[] args){
 //        String hello = right2("Hello");
@@ -83,9 +97,13 @@ public class JavaPractice {
 //        System.out.println(practice);
 //        String code = middleTwo("code");
 //        System.out.println(code);
-        Boolean oddly = endsLy("oddly");
-        System.out.println(oddly);
-        Boolean y = endsLy("y");
-        System.out.println(y);
+//        Boolean oddly = endsLy("oddly");
+//        System.out.println(oddly);
+//        Boolean y = endsLy("y");
+//        System.out.println(y);
+        String java = twoChar("java", 0);
+        System.out.println(java);
+        String va = twoChar("java", 3);
+        System.out.print(va);
     }
 }
