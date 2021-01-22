@@ -69,29 +69,19 @@ public class JavaPractice {
 
     public static String twoChar(String str, int index){
         String a;
-        if(index==0 || str.length()<=index+1){
+        if(index==0 || str.length()<=index+1||index<0){
             a = str.substring(0, 2);
         }else {
-            a = str.substring(str.length() - index);
+            a = str.substring(index, index+2);
         }
         return a;
     }
+
+    public static String middleThree(String str){
+        String a = str.substring((str.length()/2)-1, (str.length()/2)+2);
+        return a;
+    }
     public static void main(String[] args){
-//        String hello = right2("Hello");
-//        System.out.println(hello);
-//        String onetwo = right2("12345");
-//        System.out.println(onetwo);
-//        String cat = right2("cat");
-//        System.out.print(cat);
-//        String hel = theEnd("Hello",true);
-//        System.out.println(hel);
-//        String hello = withoutEnd("Hello");
-//        System.out.println(hello);
-//        String abc = withoutEnd("abc");
-//        System.out.println(abc);
-//        String ab = withoutEnd("a");
-//        System.out.println(ab);
-//        String string = middleTwo("string");
 //        System.out.println(string);
 //        String practice = middleTwo("practice");
 //        System.out.println(practice);
@@ -101,9 +91,11 @@ public class JavaPractice {
 //        System.out.println(oddly);
 //        Boolean y = endsLy("y");
 //        System.out.println(y);
-        String java = twoChar("java", 0);
-        System.out.println(java);
-        String va = twoChar("java", 3);
-        System.out.print(va);
+//        String java = twoChar("java", 0);
+//        System.out.println(java);
+//        String va = twoChar("java", 3);
+//        System.out.print(va);
+        String candy = middleThree("solving");
+        System.out.println(candy);
     }
 }
