@@ -78,8 +78,42 @@ public class JavaPractice {
     }
 
     public static String middleThree(String str){
-        String a = str.substring((str.length()/2)-1, (str.length()/2)+2);
-        return a;
+        return str.substring((str.length()/2)-1, (str.length()/2)+2);
+    }
+
+    public static  boolean hasBad(String str){
+        if(str == ""){
+            return false;
+        }else{
+            String a = str.substring(0,2);
+            if(!a.contains("b")){
+                return false;
+            }else{
+                return str.contains("bad");
+            }
+        }
+    }
+
+    public static String lastChars(String a, String b) {
+        String c;
+        String d;
+        if(a==""&&b==""){
+            c = "@";
+            d = "@";
+            return c+d;
+        }else if(a == ""){
+            c = "@";
+            d = b.substring(b.length()-1);
+            return c+d;
+        }else if(b==""){
+            c = a.substring(0,1);
+            d = "@";
+            return c+d;
+        }else{
+            c = a.substring(0,1);
+            d = b.substring(b.length()-1);
+            return c+d;
+        }
     }
     public static void main(String[] args){
 //        System.out.println(string);
@@ -97,5 +131,7 @@ public class JavaPractice {
 //        System.out.print(va);
         String candy = middleThree("solving");
         System.out.println(candy);
+        String last = lastChars("last","chars");
+        System.out.println(last);
     }
 }
