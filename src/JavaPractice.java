@@ -31,6 +31,24 @@ public class JavaPractice {
             return b;
         }
     };
+    public static String lastTwo(String str) {
+        String a;
+        String b;
+        String c;
+        if(str.length()==1||str.isEmpty()){
+            return str;
+        }
+        if(str.length()==2){
+            a = str.substring(0,1);
+            b = str.substring(1);
+            return b+a;
+        }else{
+            a = str.substring(0,str.length()-2);
+            b = str.substring(str.length()-2,str.length()-1);
+            c = str.substring(str.length()-1);
+            return a+c+b;
+        }
+    }
 
 //    public static String withoutEnd(String str) {
 //        String a = str.substring(1,str.length()-1);
@@ -115,6 +133,22 @@ public class JavaPractice {
             return c+d;
         }
     }
+
+    public String seeColor(String str) {
+        if(str.length()<3){
+            return "";
+        }
+        if(str.length()<=3&&!str.substring(0,3).equals("red")){
+            return "";
+        }else if(str.length()>=3&& str.substring(0,3).equals("red")){
+            return "red";
+        }else if(str.substring(0,4).equals("blue")){
+            return "blue";
+        }else{
+            return "";
+        }
+    }
+
     public static void main(String[] args){
 //        String java = twoChar("java", 0);
 //        System.out.println(java);
