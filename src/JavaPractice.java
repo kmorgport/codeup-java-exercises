@@ -148,6 +148,17 @@ public class JavaPractice {
             return "";
         }
     }
+    public static String minCat(String a, String b) {
+        if(a.length()>b.length()){
+            String c = a.substring(a.length()-b.length());
+            return c+b;
+        }else if(b.length()>a.length()){
+            String c = b.substring(b.length()-a.length());
+            return a+c;
+        } else{
+            return a+b;
+        }
+    }
 
     public static void main(String[] args){
 //        String java = twoChar("java", 0);
