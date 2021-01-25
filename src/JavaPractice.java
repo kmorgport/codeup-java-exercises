@@ -116,15 +116,6 @@ public class JavaPractice {
         }
     }
     public static void main(String[] args){
-//        System.out.println(string);
-//        String practice = middleTwo("practice");
-//        System.out.println(practice);
-//        String code = middleTwo("code");
-//        System.out.println(code);
-//        Boolean oddly = endsLy("oddly");
-//        System.out.println(oddly);
-//        Boolean y = endsLy("y");
-//        System.out.println(y);
 //        String java = twoChar("java", 0);
 //        System.out.println(java);
 //        String va = twoChar("java", 3);
