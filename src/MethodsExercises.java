@@ -48,6 +48,34 @@ public class MethodsExercises {
         }
         return "The factorial of !"+input+" is "+fact+".";
     }
+
+    public static void dice(){
+        System.out.println("What sided dice would you like to use?(Must be a minimum of six sides) ");
+        Scanner sc = new Scanner(System.in);
+            int diceSides = sc.nextInt();
+            int min = 1;
+            int range = diceSides-min+1;
+            int dice1 = (int)(Math.random()*range)+min;
+            int dice2 = (int)(Math.random()*range)+min;
+            System.out.println("You rolled a "+dice1+" and a "+dice2+".");
+            System.out.println("Would you like to play again? Enter yes or no: ");
+            while(true) {
+                String response = sc.nextLine();
+                if (response.toLowerCase().equals("no")) {
+                    System.out.println("thank you for playing");
+                    break;
+                }else if(response.toLowerCase().equals("yes")){
+                    System.out.println("What sided dice would you like to use?(Must be a minimum of six sides) ");
+                    diceSides = sc.nextInt();
+                    min = 1;
+                    range = diceSides-min+1;
+                    dice1 = (int)(Math.random()*range)+min;
+                    dice2 = (int)(Math.random()*range)+min;
+                    System.out.println("You rolled a "+dice1+" and a "+dice2+".");
+                    System.out.println("Would you like to play again? Enter yes or no: ");
+                }
+            }
+    }
     public static void main(String[] args){
 //        int sum = addition(3,2);
 //        System.out.println(sum);
@@ -61,7 +89,8 @@ public class MethodsExercises {
 //        System.out.println(mod);
 //        String choice = getInteger(4,12);
 //        System.out.println(choice);
-        String factor = factorial();
-        System.out.println(factor);
+//        String factor = factorial();
+//        System.out.println(factor);
+        MethodsExercises.dice();
     }
 }

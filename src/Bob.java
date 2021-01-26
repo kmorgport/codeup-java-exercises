@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Bob {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What would you like to say to Bob? Type n to continue: ");
+        System.out.println("What would you like to say to Bob? Type n to end the conversation: ");
         while(true){
             String response = scanner.nextLine();
             if(response.equals("n")){
