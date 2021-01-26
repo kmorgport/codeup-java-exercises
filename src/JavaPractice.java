@@ -159,6 +159,19 @@ public class JavaPractice {
             return a+b;
         }
     }
+    public static String without2(String str) {
+        if(str.isEmpty()||str.length()<=1){
+            return str;
+        }
+        String a = str.substring(0,2);
+        String b = str.substring(str.length()-2);
+        if(a.equals(b)){
+            String c = str.substring(2);
+            return c;
+        }else{
+            return str;
+        }
+    }
 
     public static void main(String[] args){
 //        String java = twoChar("java", 0);
