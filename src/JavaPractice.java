@@ -172,6 +172,34 @@ public class JavaPractice {
             return str;
         }
     }
+    public String deFront(String str) {
+        if(str.substring(0,2).equals("ab")){
+            return str;
+        }else if(str.substring(0,1).equals("a")){
+            String a = str.substring(0,1);
+            String b = str.substring(2);
+            return a+b;
+        }else if(str.substring(1,2).equals("b")){
+            String a = str.substring(1);
+            return a;
+        }else{
+            String a = str.substring(2);
+            return a;
+        }
+    }
+    public String startWord(String str, String word) {
+        if(str.length()<word.length() || str.isEmpty()){
+            return "";
+        }else if(str.length()==1 && word.length()==1){
+            return str;
+        }else if(str.substring(1,2).equals(word.substring(1,2))){
+            String a = str.substring(0,word.length());
+            return a;
+        }else{
+            return "";
+        }
+    }
+
 
     public static void main(String[] args){
 //        String java = twoChar("java", 0);
