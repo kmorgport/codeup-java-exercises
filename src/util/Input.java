@@ -16,13 +16,22 @@ public class Input {
 
     public boolean yesNo(){
         System.out.println("Enter yes or no");
-        String answer = scanner.nextLine();
-        return answer.toLowerCase().equals("yes") || answer.toLowerCase().equals("y");
+        String answer = this.scanner.nextLine();
+        return(answer.toLowerCase().equals("y")||answer.toLowerCase().equals("yes"));
     }
 
     public int getInt(){
         System.out.println("Enter an integer");
         return scanner.nextInt();
+    }
+
+    public int getInt(int min, int max){
+        while(true){
+            System.out.println("Enter an integer between "+min+" and "+max+".");
+            int answer = this.scanner.nextInt();
+            if(answer>= min && answer<= max)
+                return answer;
+        }
     }
 
     public double getDouble(){
