@@ -10,7 +10,7 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Enter a string:");
+//        System.out.println("Enter a string:");
         return scanner.nextLine();
     }
 
@@ -22,7 +22,7 @@ public class Input {
 
     public int getInt(){
 //        System.out.println("Enter an integer");
-        return scanner.nextInt();
+        return Integer.parseInt(scanner.nextLine());
     }
 
     public int getInt(int min, int max){
