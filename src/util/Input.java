@@ -11,7 +11,7 @@ public class Input {
 
     public String getString(){
 //        System.out.println("Enter a string:");
-        return scanner.nextLine();
+        return this.scanner.nextLine();
     }
 
     public boolean yesNo(){

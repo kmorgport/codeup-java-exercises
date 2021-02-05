@@ -1,5 +1,6 @@
 package grades;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Student {
@@ -23,24 +24,24 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
-    public void getName(){
-        System.out.println(this.name);
+    public String getName(){
+        return this.name;
     }
 
     public void addGrade(double grade){
         this.grades.add(grade);
     }
 
-    public void getGrades(){
-        System.out.println(this.grades);
+    public ArrayList<Double> getGrades(){
+        return this.grades;
     }
 
-    public void getGradeAverage(){
+    public double getGradeAverage(){
         double gradeTotal = 0;
         for(Double grade: grades){
             gradeTotal += grade;
         }
         double a = gradeTotal / grades.size();
-        System.out.println(Math.round(a * 100.0) / 100.0);
+        return Math.round(a * 100.0) / 100.0;
     }
 }
