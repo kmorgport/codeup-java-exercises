@@ -33,11 +33,12 @@ public class GradesApplication {
         System.out.println(" ");
         System.out.println("Here are the GitHub usernames of our students!");
         System.out.println(" ");
-        for (String student : studentAndGrades.keySet()) {
-            System.out.print("|" + student + "| ");
-        }
-        System.out.println(" ");
-        questionLoop(studentAndGrades);
+        System.out.println(studentAndGrades.keySet());
+//        for (String student : studentAndGrades.keySet()) {
+//            System.out.print("|" + student + "| ");
+//        }
+//        System.out.println(" ");
+//        questionLoop(studentAndGrades);
 //        System.out.println("What student would you like to see more information on?");
 //        String answer = input.nextLine();
 //        if(studentAndGrades.containsKey(answer)) {
