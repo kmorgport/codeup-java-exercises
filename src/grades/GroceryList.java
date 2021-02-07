@@ -20,27 +20,55 @@ public class GroceryList {
 
     public static void chooseGrocery(){
         Input input = new Input();
-        GroceryList list = new GroceryList();
+        HashMap<String, GroceryList> list = new HashMap<>();
+        GroceryList fruits = new GroceryList();
+        GroceryList grains = new GroceryList();
+        GroceryList veggies = new GroceryList();
+        GroceryList meats = new GroceryList();
+        list.put("Fruit", fruits);
+        list.put("Grains", grains);
+        list.put("Vegetables", veggies);
+        list.put("Meat", meats);
         System.out.println("Would you like to add an item to the list? ");
         boolean ans = input.yesNo();
         if(ans){
-            System.out.println("Select Fruit : Grain : Vegetable : Meat ");
-            String foodType = input.getString();
-            System.out.println("Pick quantity");
-            int quantity = input.getInt();
-            list.addToHash(foodType,quantity);
-            System.out.println("Would you like to add another item to the list? ");
-            ans = input.yesNo();
-            while(ans){
+            while(ans) {
                 System.out.println("Select Fruit : Grain : Vegetable : Meat ");
-                foodType = input.getString();
-                System.out.println("Pick quantity");
-                quantity = input.getInt();
-                list.addToHash(foodType,quantity);
+                String foodType = input.getString();
+                switch (foodType.toLowerCase()) {
+                    case "fruit":
+                        System.out.println("Select a fruit type to add: ");
+                        foodType = input.getString();
+                        System.out.println("Pick quantity");
+                        int quantity = input.getInt();
+                        fruits.addToHash(foodType, quantity);
+                        break;
+                    case "grain":
+                        System.out.println("Select a grain to add: ");
+                        foodType = input.getString();
+                        System.out.println("Pick quantity");
+                        quantity = input.getInt();
+                        grains.addToHash(foodType, quantity);
+                        break;
+                    case "vegetable":
+                        System.out.println("Select a vegetable to add: ");
+                        foodType = input.getString();
+                        System.out.println("Pick quantity");
+                        quantity = input.getInt();
+                        veggies.addToHash(foodType, quantity);
+                        break;
+                    case "meat":
+                        System.out.println("Select a meat or meat substitute type to add: ");
+                        foodType = input.getString();
+                        System.out.println("Pick quantity");
+                        quantity = input.getInt();
+                        meats.addToHash(foodType, quantity);
+                        break;
+                }
                 System.out.println("Would you like to add another item to the list? ");
                 ans = input.yesNo();
             }
-            for(Map.Entry entry: list.groceries.entrySet()){
+            for(Map.Entry entry: list.entrySet()){
                 System.out.println("key: " + entry.getKey() + "; value: " + entry.getValue());
             }
 
