@@ -68,14 +68,24 @@ public class GroceryList {
                 System.out.println("Would you like to add another item to the list? ");
                 ans = input.yesNo();
             }
-            for(Map.Entry entry: list.entrySet()){
-                System.out.println("key: " + entry.getKey() + "; value: " + entry.getValue());
-            }
+        printGroceryList(list);
 
         }else{
             System.out.println("Have a good day");
         }
 
+    }
+
+    public static void printGroceryList(HashMap<String,GroceryList>list){
+        for(Map.Entry<String,GroceryList>entry:list.entrySet()){
+            String category = entry.getKey();
+            GroceryList content = entry.getValue();
+            for(Object thing: content.findKeys()){
+                String food = (String) thing;
+                System.out.println(thing);
+                System.out.println(content.findAmount(food));
+            }
+        }
     }
 
     public Set findKeys(){
