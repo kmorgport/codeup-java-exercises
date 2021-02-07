@@ -79,6 +79,7 @@ public class GroceryList {
     public static void printGroceryList(HashMap<String,GroceryList>list){
         for(Map.Entry<String,GroceryList>entry:list.entrySet()){
             String category = entry.getKey();
+            System.out.println("For " + category + " you purchased ...");
             GroceryList content = entry.getValue();
             for(Object thing: content.findKeys()){
                 String food = (String) thing;
