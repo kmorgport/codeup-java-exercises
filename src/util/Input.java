@@ -22,7 +22,8 @@ public class Input {
 
     public int getInt(){
 //        System.out.println("Enter an integer");
-        return Integer.parseInt(scanner.nextLine());
+        String s = getString();
+        return Integer.parseInt(s);
     }
 
     public int getInt(int min, int max){
@@ -36,7 +37,8 @@ public class Input {
 
     public double getDouble(){
         System.out.println("Enter a double: ");
-        return scanner.nextDouble();
+        String s = getString();
+        return Double.parseDouble(s);
     }
 
 }
