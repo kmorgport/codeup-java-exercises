@@ -20,10 +20,15 @@ public class Input {
         return(answer.toLowerCase().equals("y")||answer.toLowerCase().equals("yes"));
     }
 
-    public int getInt(){
+    public int getInt() throws NumberFormatException{
 //        System.out.println("Enter an integer");
         String s = getString();
-        return Integer.parseInt(s);
+        try{
+            return Integer.parseInt(s);
+        } catch(NumberFormatException e){
+            System.err.println("This is not an integer");
+            return getInt();
+        }
     }
 
     public int getInt(int min, int max){
@@ -35,10 +40,15 @@ public class Input {
         }
     }
 
-    public double getDouble(){
+    public double getDouble() throws NumberFormatException{
         System.out.println("Enter a double: ");
         String s = getString();
-        return Double.parseDouble(s);
+        try{
+            return Double.parseDouble(s);
+        } catch(NumberFormatException e){
+            System.err.println("This is not a Double");
+            return getDouble();
+        }
     }
 
 }

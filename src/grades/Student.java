@@ -1,5 +1,7 @@
 package grades;
 
+import util.Input;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -8,13 +10,16 @@ public class Student {
     private ArrayList <Double> grades;
 
     public static void main(String[] args){
-        Student kole = new Student("Kole");
-        kole.getName();
-        kole.addGrade(3.2);
-        kole.addGrade(4.2);
-        kole.addGrade(5.6);
-        kole.getGrades();
-        kole.getGradeAverage();
+        Input test = new Input();
+        System.out.println("test with integer");
+        test.getDouble();
+//        Student kole = new Student("Kole");
+//        kole.getName();
+//        kole.addGrade(3.2);
+//        kole.addGrade(4.2);
+//        kole.addGrade(5.6);
+//        kole.getGrades();
+//        kole.getGradeAverage();
 
 
     }
