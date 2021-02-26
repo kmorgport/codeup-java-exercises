@@ -1,3 +1,5 @@
+package grades;
+
 import grades.Student;
 import util.Input;
 
